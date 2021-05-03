@@ -1,0 +1,76 @@
+{   "view": [-127.64, 53.72],
+    "layers": {
+        "CHSAs 2018": {
+            "id": "CHSA2018",
+            "shapeType": "polygon",
+            "url": "../data/CHSA_2018.geojson",
+            "title": "CHSAs 2018",
+            "style": {
+                "styleType": "custom",
+                "color": "rgba(220,220,100,0.7)",
+                "strokeColor": "",
+                "scale": "",
+                "icon": "",
+                "theme": {
+                    "choropleth": "",
+                    "proportional": "",
+                    "identified": "HA_Name"
+                }
+            },
+            "visible": true,
+            "popup": {
+                "unformatted": [
+                    "CHSA_Name", 
+                    "HSDA_Name", 
+                    "HA_Name",
+                    "CHSA_Pop16"
+                ],
+                "formatted": [
+                    "CHSA Name", 
+                    "HSDA Name", 
+                    "HA Name",
+                    "CHSA Population 2016"
+                ]
+            }
+        }, 
+        "Clinics Two": {
+            "id": "clinicsTwo",
+            "shapeType": "point",
+            "url": "../data/clinic_list_omar.geojson",
+            "title": "Clinics Two",
+            "style": {
+                "styleType": "custom",
+                "color": "rgba(255,200,180,0.5)",
+                "strokeColor": "",
+                "scale": 0.05,
+                "icon": "../assets/icon.png",
+                "theme": {
+                    "choropleth": "",
+                    "proportional": "NUM_PHYSICIANS",
+                    "identified": "HA_NAME"
+                }
+            },
+            "visible": false,
+            "popup": {
+                "unformatted": [
+                            "ADDRESS_FULL", 
+                            "CITY", 
+                            "PROVINCE", 
+                            "POSTAL_CODE",
+                            "COUNTRY",
+                            "HA_NAME",
+                            "NUM_PHYSICIANS"
+                        ],
+                "formatted": [
+                            "Full Address", 
+                            "City", 
+                            "Province",
+                            "Postal Code",
+                            "Country",
+                            "Health Authority Name",
+                            "Number of Physicians"
+                        ]
+            }
+        }
+    }
+}
