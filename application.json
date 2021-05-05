@@ -3,7 +3,7 @@
         "CHSAs 2018": {
             "id": "CHSA2018",
             "shapeType": "polygon",
-            "url": "/data/CHSA_2018.geojson",
+            "url": "./data/CHSA_2018.geojson",
             "title": "CHSAs 2018",
             "style": {
                 "styleType": "custom",
@@ -36,14 +36,14 @@
         "Clinics Two": {
             "id": "clinicsTwo",
             "shapeType": "point",
-            "url": "/data/clinic_list_omar.geojson",
+            "url": "./data/clinic_list_omar.geojson",
             "title": "Clinics Two",
             "style": {
                 "styleType": "custom",
                 "color": "rgba(255,200,180,0.5)",
                 "strokeColor": "",
                 "scale": 0.05,
-                "icon": "/assets/icon.png",
+                "icon": "./assets/icon.png",
                 "theme": {
                     "choropleth": "",
                     "proportional": "NUM_PHYSICIANS",
