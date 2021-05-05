@@ -43,7 +43,7 @@
                 "color": "rgba(255,200,180,0.5)",
                 "strokeColor": "",
                 "scale": 0.05,
-                "icon": "../assets/icon.png",
+                "icon": "/assets/icon.png",
                 "theme": {
                     "choropleth": "",
                     "proportional": "NUM_PHYSICIANS",
