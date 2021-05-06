@@ -14,12 +14,15 @@
                 "icon": "",
                 "theme": {
                     "size": {
-                        "proportional": ""
+                        "proportional": "",
+                        "legend": ""
                     },
                     "color": {
                         "choropleth": "",
+                        "ranking": "", 
                         "identified": "",
-                        "scheme": []
+                        "scheme": [],
+                        "legend": ""
                     }
                 }
             },
@@ -31,9 +34,9 @@
                     "HA_Name"
                 ],
                 "formatted": [
-                    "CHSA Name", 
-                    "HSDA Name", 
-                    "HA Name"
+                    "CHSA", 
+                    "HSDA", 
+                    "HA"
                 ]
             }
         },
@@ -51,12 +54,15 @@
                 "icon": "./assets/icon.png",
                 "theme": {
                     "size": {
-                        "proportional": ""
+                        "proportional": "",
+                        "legend": ""
                     },
                     "color": {
                         "choropleth": "",
+                        "ranking": "",
                         "identified": "",
-                        "scheme": []
+                        "scheme": [],
+                        "legend": ""
                     }
                 }
             },
@@ -92,12 +98,15 @@
                 "icon": "./assets/icon.png",
                 "theme": {
                     "size": {
-                        "proportional": "NUM_PHYSICIANS"
+                        "proportional": "NUM_PHYSICIANS",
+                        "legend": "Number of Practitioners per Clinic"
                     },
                     "color": {
                         "choropleth": "",
+                        "ranking": "",
                         "identified": "ID",
-                        "scheme": ["#7fc97f","#beaed4","#fdc086","#ffff99","#386cb0","#f0027f","#bf5b17","#666666"]
+                        "scheme": ["#7fc97f","#beaed4","#fdc086","#ffff99","#386cb0","#f0027f","#bf5b17","#666666"],
+                        "legend": "Method through which Clinics are Identified"
                     }
                 }
             },
