@@ -100,9 +100,6 @@ select,
   left: 0px;
   right: 0px;
   z-index: 1000;
-  /* background: rgba(255, 255, 255, 0.5); */
-  /* Get ISU logo */
-  background: url(../img/wait.png) no-repeat center center fixed;
 }
 
 .wait img {
