@@ -2,7 +2,9 @@ export default class Scales {
     static GetChoroplethFn(features, id, color) {
         let featureArray = this.CreateFeatureArray(features, id);
 
-        let max = d3.max(featureArray);
+        let fA = featureArray.map(Number);
+
+        let max = d3.max(fA);
 
         return d3.scaleThreshold()
                     .domain([max * 0.25, max * 0.5, max * 0.75, max])
@@ -12,7 +14,9 @@ export default class Scales {
     static GetProportionFn(features, id) {
         let featureArray = this.CreateFeatureArray(features, id);
 
-        let max = d3.max(featureArray);
+        let fA = featureArray.map(Number);
+
+        let max = d3.max(fA);
 
         return d3.scaleThreshold()
                     .domain([max * 0.25, max * 0.5, max * 0.75, max])

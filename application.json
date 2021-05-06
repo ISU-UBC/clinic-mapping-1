@@ -1,5 +1,42 @@
 {   "view": [-127.64, 53.72],
     "layers": {
+        "CHSAs 2018": {
+            "id": "CHSA2018",
+            "shapeType": "polygon",
+            "url": "./data/CHSA_2018.geojson",
+            "title": "CHSAs 2018",
+            "style": {
+                "styleType": "default",
+                "color": "rgba(220,220,100, 1)",
+                "opacity": 0.6,
+                "strokeColor": "",
+                "scale": "",
+                "icon": "",
+                "theme": {
+                    "size": {
+                        "proportional": ""
+                    },
+                    "color": {
+                        "choropleth": "",
+                        "identified": "",
+                        "scheme": []
+                    }
+                }
+            },
+            "visible": true,
+            "popup": {
+                "unformatted": [
+                    "CHSA_Name", 
+                    "HSDA_Name", 
+                    "HA_Name"
+                ],
+                "formatted": [
+                    "CHSA Name", 
+                    "HSDA Name", 
+                    "HA Name"
+                ]
+            }
+        },
         "Clinics Addressed": {
             "id": "clinicsOne",
             "shapeType": "point",
