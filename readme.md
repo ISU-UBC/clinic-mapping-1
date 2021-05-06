@@ -6,16 +6,12 @@ The app is hosted on GitHub Pages here: ...
 
 **Note**: If you're on mobile, rotate your device for best experience. 
 
+Shouldn't do a choropleth map with points and shouldn't do a proportional map with polygons. Add a link to the types of mapping.
+
 ## TODO
 
-- Legend
-  - Use scale functions
-- Styling
-  - Decide on a scale functions
-  - In the styling functions, use scale functions where appropriate
 - Bundler
 - JSDOCs
-- Fix loading screen to appear at the appropriate time
 - Get an ISU image for loading screen
 
 ## Description
@@ -64,6 +60,10 @@ Cant be colored and choropleth. It's one or the other.
 "visible" to set the layer visibility 
 "popup" is for formatting the popup
 
+#### Polygon Layer Style
+
+#### Point Layer Style
+
 ### Developers
 
 #### Project Development
@@ -77,13 +77,7 @@ Cant be colored and choropleth. It's one or the other.
 
 #### File Conversions
 
-###### Use ORGE to Convert SHP to / from GeoJSON
-
-[![Click me!](./img/ogre.png)](https://ogre.adc4gis.com/)
-
-###### Use Python Script to Convert from Excel to GeoJSON
-
-**Note**: The installation instructions are for Windows devices, but may work on Mac.
+##### Setup
 
 1. Install [*Anaconda Navigator*](https://www.anaconda.com/)
 2. Get GeoPandas
@@ -94,15 +88,21 @@ Cant be colored and choropleth. It's one or the other.
 4. After all these steps you should be ready to run the new environment in Spyder for Python scripting.
      - Additionally, run the following command in the Spyder terminal:  ```pip install openpyxl```
 
+##### Use Python Script to Convert SHP to GeoJSON
+
+##### Use Python Script to Convert from Excel to GeoJSON
+
+
+
 ## Authors
 
 [Innovation Support Unit - Department of Family Practice at UBC](https://isu.familymed.ubc.ca/)
 
-[Omar Kawach](https://omarkawach.github.io/)
+[Omar Kawach - Consultant](https://omarkawach.github.io/)
 
 ## Credit and Acknowledgements
 
-[Bruno St-Aubin at Statistics Canada - Components and Workflow](https://github.com/SGC-CGS/geo-explorer)
+[Bruno St-Aubin at Statistics Canada - Components](https://github.com/SGC-CGS/geo-explorer)
 
 [OpenLayers - Source Code](https://github.com/openlayers/openlayers)
 
@@ -113,6 +113,10 @@ Cant be colored and choropleth. It's one or the other.
 [White Google Maps Pin](http://www.clker.com/clipart-white-google-map-pin-1.html)
 
 ## Resources
+
+#### D3
+
+[D3 Color Schemes](https://observablehq.com/@d3/color-schemes)
 
 #### GIS
 

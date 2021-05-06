@@ -1,44 +1,43 @@
-import Style from "./style.js"
-
 export default class Scales {
-	static ChoroplethScaleFn(features) {
-        return
-	}
+    static GetChoroplethFn(features, id, color) {
+        let featureArray = this.CreateFeatureArray(features, id);
 
-    static ProportionScaleFn(features) {
-        let featureArray = []
-        features.forEach(element => {
-            featureArray.push(element.getProperties().id)
-        });
+        let max = d3.max(featureArray);
 
-        let max = (d3.max(featureArray));
-        let min = d3.min(featureArray);
-
-        let a = d3.scaleLinear()
-            .domain([min, max])
-            .range([0, 0.1])
-
-        let c = d3.scaleLinear()
-        .domain([
-            0,
-            max * 0.25,
-            max * 0.5,
-            max * 0.75,
-            max,
-        ])
-        .range([0.02, 0.04, 0.06, 0.08, 0.1]);
-        
-
-        let z = d3.scaleQuantize()
-        .domain(d3.extent(featureArray))
-        .range([0.05, 0.1, 0.15, 0.2, 0.25])
-
-    
-        return z;
-
+        return d3.scaleThreshold()
+                    .domain([max * 0.25, max * 0.5, max * 0.75, max])
+                    .range(color);
     }
 
-    static IdentifiedScaleFn(features) {
-        return
-	}
+    static GetProportionFn(features, id) {
+        let featureArray = this.CreateFeatureArray(features, id);
+
+        let max = d3.max(featureArray);
+
+        return d3.scaleThreshold()
+                    .domain([max * 0.25, max * 0.5, max * 0.75, max])
+                    .range([0.03, 0.05, 0.075, 0.095]);
+    }
+
+    static GetIdentifierFn(features, id, color) {
+        let featureArray = this.CreateFeatureArray(features, id);
+        
+        let removeDuplicates = new Set(featureArray);
+
+        let data = Array.from(removeDuplicates);
+
+        return d3.scaleOrdinal().domain(data).range(color);
+    }
+
+    static CreateFeatureArray(features, id) {
+        let featureArray = [];
+        features.forEach((feature) => {
+            let f = feature.getProperties()[id];
+            if(f == null) {
+                return;
+            }
+            featureArray.push(f);
+        });
+        return featureArray;
+    }
 }

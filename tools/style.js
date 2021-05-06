@@ -1,10 +1,14 @@
 export default class Style {
   static GetStyle(type, json) {
-    if(json.styleType == "default") {
+
+    if (json.styleType == "default") {
+
       if (type == "point") return this.DefaultPointStyle(json);
 
       if (type == "polygon") return this.DefaultPolygonStyle();
+
     } else {
+
       if (type == "point") return this.PointStyle(json);
 
       if (type == "polygon") return this.PolygonStyle(json);
@@ -15,7 +19,7 @@ export default class Style {
   static DefaultPolygonStyle() {
     return new ol.style.Style({
       fill: new ol.style.Fill({
-        color: "rgba(100,100,180,0.7)",
+        color: "rgba(100,100,180,1)",
       }),
       stroke: new ol.style.Stroke({
         color: "rgba(255,255,255,1)",
@@ -28,9 +32,8 @@ export default class Style {
     return new ol.style.Style({
       image: new ol.style.Icon({
         src: json.icon,
-        color: "rgba(255, 255, 225, 0.6)",
-        opacity: 0.75,
-        scale: 0.05,
+        color: "rgba(255, 255, 225, 1)",
+        scale: 0.075,
       }),
     });
   }
@@ -42,7 +45,7 @@ export default class Style {
         width: 1,
       }),
       fill: new ol.style.Fill({
-        color: json.color,
+        color: this.StyleFunction(json.color, json.colorFn, json.colorFnVal)
       }),
     });
   }
@@ -51,18 +54,20 @@ export default class Style {
     return new ol.style.Style({
       image: new ol.style.Icon({
         src: json.icon,
-        color: json.color,
-        opacity: 0.75,
-        scale: this.StyleFunction(json.scale, json.scaleFn, json.scaleVal),
+        color: this.StyleFunction(json.color, json.colorFn, json.colorFnVal),
+        scale: this.StyleFunction(json.scale, json.sizeFn, json.sizeFnVal),
       }),
     });
   }
 
-  static StyleFunction(style, styleFn, scaleVal) {
-    if (styleFn != null) {
-      return styleFn(scaleVal);
+  static StyleFunction(defaultFromJson, themeFn, val) {
+
+    if (val == undefined || val == null) {
+      return;
+    } else if (themeFn != null) {
+      return themeFn(val);
     } else {
-      return style;
+      return defaultFromJson;
     }
   }
 
@@ -88,7 +93,7 @@ export default class Style {
     return new ol.style.Style({
       image: new ol.style.Icon({
         src: json.icon,
-        color: "rgba(0, 255, 225, 0.6)",
+        color: "rgba(0, 200, 200, 1)",
         scale: 0.10,
       }),
     });

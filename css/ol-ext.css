@@ -1908,7 +1908,7 @@ ul.ol-legend {
 .ol-control.ol-legend .ol-legend,
 .ol-mapzone > div,
 ul.ol-legend li div {
-  display: inline-block;
+  /* display: inline-block; */
 }
 ul.ol-legend li.ol-title {
   text-align: center;
