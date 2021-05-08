@@ -84,11 +84,11 @@
                 ]
             }
         }, 
-        "Clinics Identified": {
+        "Clinics Proportional Symbol Map": {
             "id": "clinicsTwo",
             "shapeType": "point",
             "url": "./data/clinic_list.geojson",
-            "title": "Clinics Identified",
+            "title": "Clinics Proportional Symbol Map",
             "style": {
                 "styleType": "custom",
                 "color": "rgba(255,200,180, 1)",

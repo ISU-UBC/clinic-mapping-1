@@ -1,38 +1,19 @@
-# Clinic Map v1 (DRAFT)
+# CAMP Clinic List Map
 
-This project is still in development. Version 1 will soon be split to 2 versions.
-
-The app is hosted on GitHub Pages here: ...
+Click here to access the [CAMP Clinic List Map](https://isu-ubc.github.io/clinic-mapping-1/)
 
 **Note**: If you're on mobile, rotate your device for best experience. 
 
-Shouldn't do a choropleth map with points and shouldn't do a proportional map with polygons. Add a link to the types of mapping.
-
-## TODO
-
-- Bundler
-- JSDOCs
-- Get an ISU image for loading screen
-
 ## Description
 
-This version has two layers to toggle through. One layer is just the point markers of where all the addresses are, and the second layer is those same point markers scaled to size of the number of physicians working at the clinic. The point markers are also color coded based on identifers. 
+This version has three layers to toggle through. One layer is just the point markers of where all the addresses are, and the second layer is those same point markers scaled to size of the number of physicians working at the clinic. Scaling symbols on a map is thematic, and known as [proportional symbol mapping](https://sites.google.com/site/boardinclassrom/map/proportional-map). The proportional point markers are also color coded based on identifers, such as ID. The final layer is CHSA boundaries. 
 
-## Documentation
-
-...JS DOCS
-
-## Getting Started
-
-### Features
+## Features of the Application
 
 - Map Container 
   - A view over some geography
-  - View vector data (points)
-    - Two point marker layers (both with custom icons)
-      - One styled based on size (proportional)
-      - Both styled based on identifiers
-  - Two base maps 
+  - View vector data (points, and / or polygons)
+  - Base maps
   - OpenLayer Controls
     - Layer switcher to hide / show layers and base maps
     - Zoom in / out
@@ -40,10 +21,25 @@ This version has two layers to toggle through. One layer is just the point marke
     - Full screen mode
     - Popup to show information of the clicked point marker
     - Legend 
-      - Can handle proportional symbol mapping of point markers
-      - Can handle color coding of point markers (e.g., choropleth)
 
-### Users
+## Getting Started
+
+### Project Development
+
+1. Clone the repo to your desired file directory
+2. Download [Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb) or [Live Server in VSCode](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+3. Open the web app in your preferred text editor if using Web Server for Chrome, otherwise use VSCode
+4. Use [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/) for debugging
+   - Ensure that cache is disabled in DevTools
+5. Ensure the languages you work with are included in the system PATH
+
+### Feeding the Application Information
+
+#### The JSON
+
+**Note:** Coordinate format is Longitude / Latitude. 
+
+Shouldn't do a choropleth map with points and shouldn't do a proportional map with polygons. Add a link to the types of mapping.
 
 A walk-through of the web app
 
@@ -60,22 +56,18 @@ Cant be colored and choropleth. It's one or the other.
 "visible" to set the layer visibility 
 "popup" is for formatting the popup
 
-#### Polygon Layer Style
+#### Polygon Layer Styling
+##### Default
 
-#### Point Layer Style
+##### Custom
 
-### Developers
+#### Point Layer Styling
 
-#### Project Development
+##### Default
 
-1. Clone the repo to your desired file directory
-2. Download [Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb) or [Live Server in VSCode](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-3. Open the web app in your preferred text editor if using Web Server for Chrome, otherwise use VSCode
-4. Use [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/) for debugging
-   - Ensure that cache is disabled in DevTools
-5. Ensure the languages you work with are included in the system PATH
+##### Custom
 
-#### File Conversions
+### File Conversions
 
 ##### Setup
 
@@ -92,6 +84,9 @@ Cant be colored and choropleth. It's one or the other.
 
 ##### Use Python Script to Convert from Excel to GeoJSON
 
+##### Use Python Script to Identify Clinics by ID
+
+##### Use Python Script to Solve for Physicians by Population
 
 
 ## Authors
@@ -114,14 +109,16 @@ Cant be colored and choropleth. It's one or the other.
 
 ## Resources
 
-#### D3
+#### Styling
 
 [D3 Color Schemes](https://observablehq.com/@d3/color-schemes)
 
+[ColorBrewer Cartography Color Advice](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)
+
 #### GIS
 
-[Spatial references](https://spatialreference.org/ref/epsg/)
+[Spatial References](https://spatialreference.org/ref/epsg/)
 
 #### OpenLayers
 
-**Note:** Coordinate format is Longitude / Latitude. 
+[OpenLayers Documentation](https://openlayers.org/en/latest/doc/)
