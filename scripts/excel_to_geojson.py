@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 @author: omarkawach
+@description: Convert an Excel sheet to GeoJSON
 """
 
 # Import packages

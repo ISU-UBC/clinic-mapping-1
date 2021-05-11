@@ -3,6 +3,7 @@
 """
 @author: omarkawach
 @note: This script assumes you already converted your shape file to geojson
+@description: Fix the ID column in the clinic list GeoJSON for easier identification
 """
 
 # Import packages
